@@ -2,13 +2,13 @@
 Installera Node.js via er pakethanterare.
 
 Installera dependencies
-    npm install
+`npm install`
 Starta presentationen
-    npm start
+`npm start`
 
 # Hotkeys
-Piltangenter, navigation
+`Piltangenter`, navigation
 
-ESC, overview
+`ESC`, overview
 
-s, split view
+`s`, split view
