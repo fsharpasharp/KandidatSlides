@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Presentation</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/gruvbox-dark.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="center">
+          <h1 class="fragment fade-down">Conan</h1>
+          <p class="fragment fade-right">En beviseditor för första ordningens logik</p>
+        </section>
+        <section data-markdown class="center">
+          <script type="text/template">
+## Syftet med projektet
+- Målgrupp <!-- .element: class="fragment" -->
+- Inlärning <!-- .element: class="fragment" -->
+          </script>
+        </section>
+        <section data-markdown class="center">
+          <script type="text/template">
+## Prestudy
+          </script>
+        </section>
+        <section data-markdown class="center">
+          <script type="text/template">
+## Kursbok
+          </script>
+        </section>
+        <section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Editorn
+Funktionaliteter <!-- .element: class="fragment" -->
+- Syntax checking <!-- .element: class="fragment" -->
+- Verifikation <!-- .element: class="fragment" -->
+- Generering <!-- .element: class="fragment" -->
+- Export till LaTeX <!-- .element: class="fragment" -->
+- Genvägar <!-- .element: class="fragment" -->
+- Spara/ladda <!-- .element: class="fragment" -->
+
+Note:
+Blir rött när uttrycket inte är välformat
+Verifikiation av korrekt tillämpning av regler
+Generering av korrekta uttryck givet korrekta premisser
+Exportera till LaTeX
+            </script>
+          </section>
+          <section data-markdown data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted>
+            <script type="text/template">
+## Syntax checking
+            </script>
+          </section>
+          <section data-markdown data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted>
+            <script type="text/template">
+## Verifikation
+            </script>
+          </section>
+          <section data-markdown data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted>
+            <script type="text/template">
+## Generering
+            </script>
+          </section>
+          <section data-markdown data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted>
+            <script type="text/template">
+## Export till LaTeX
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+```
+\begin{logicproof}{4}
+% For use with https://www.ctan.org/pkg/logicproof
+% Note that ending a box in a box is not valid and will not give the desired results.
+\neg \forall xP(x) & premise \\
+\begin{subproof}
+\neg \exists x\neg P(x) & assumption \\
+\begin{subproof}
+y & fresh \\
+\begin{subproof}
+\neg P(y) & assumption \\
+\exists x\neg P(x) & $\exists \mathrm{i}$, 4 \\
+\bot  & $\neg \mathrm{e}$, 5, 2 
+\end{subproof}
+P(y) & PBC, 4--6 
+\end{subproof}
+\forall xP(x) & $\forall \mathrm{i}$, 3--7 \\
+\bot  & $\neg \mathrm{e}$, 8, 1 
+\end{subproof}
+\exists x\neg P(x) & PBC, 2--9 
+\end{logicproof}
+```
+            </script>
+          </section>
+          <section data-markdown>
+            <script type="text/template">
+## Genvägar
+Olika sätt att skriva ∧
+- Skriva ^ <!-- .element: class="fragment" -->
+- Skriva & <!-- .element: class="fragment" -->
+- Skriva an <!-- .element: class="fragment" -->
+- Klicka på knappen <!-- .element: class="fragment" -->
+- Använd insert unicode, U+2227 <!-- .element: class="fragment" -->
+- Googla efter AND eller LAND och använda copy paste <!-- .element: class="fragment" -->
+- Skriva \land i en matematisk miljö i en LaTeX-fil, kompilera till PDF, och kopiera symbolen därifrån<!-- .element: class="fragment" -->
+            </script>
+          </section>
+        </section>
+        <section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Utvärdering av editorn
+- Nielsen's heuristics <!-- .element: class="fragment" -->
+- User tests <!-- .element: class="fragment" -->
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Nielsen's heuristics
+1. Visibility of system status <!-- .element: class="fragment" -->
+2. Match between system and the real world <!-- .element: class="fragment" -->
+3. User control and freedom <!-- .element: class="fragment" -->
+4. Consistency and standards <!-- .element: class="fragment" -->
+5. Error prevention <!-- .element: class="fragment" -->
+6. Recognition rather than recall <!-- .element: class="fragment" -->
+7. Flexibility and efficiency of use <!-- .element: class="fragment" -->
+8. Aesthetic and minimalist design <!-- .element: class="fragment" -->
+9. Help users recognise, diagnose, and recover from errors <!-- .element: class="fragment" -->
+10. Help and documentation <!-- .element: class="fragment" -->
+            </script>
+          </section>
+        </section>
+        <section data-markdown class="center">
+          <script type="text/template">
+## Frågeställning
+          </script>
+        </section>
+        <section data-markdown class="center">
+          <script type="text/template">
+## Slutsats
+          </script>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+// More info about config & dependencies:
+// - https://github.com/hakimel/reveal.js#configuration
+// - https://github.com/hakimel/reveal.js#dependencies
+Reveal.initialize({
+  // Transition style
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+  // Transition speed
+  transitionSpeed: 'default', // default/fast/slow
+  // Transition style for full page slide backgrounds
+  backgroundTransition: 'zoom', // none/fade/slide/convex/concave/zoom
+  // Set default timing of 2 minutes per slide
+  defaultTiming: 120,
+  center: false,
+  dependencies: [
+    { src: 'plugin/markdown/marked.js' },
+    { src: 'plugin/markdown/markdown.js' },
+    { src: 'plugin/notes/notes.js', async: true },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+  ]
+});
+    </script>
+  </body>
+</html>
