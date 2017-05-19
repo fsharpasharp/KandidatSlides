@@ -24,9 +24,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-background-image="images/proghram.PNG" class="center" data-timing="10">
+        <section class="center" data-timing="10">
           <h1 class="fragment fade-down">Conan</h1>
-          <h3 class="fragment fade-right">En beviseditor för första ordningens logik</h3>
+          <h3 class="fragment fade-right">En beviseditor för predikatlogik</h3>
         </section>
         <section>
           <section data-markdown class="center">
@@ -36,9 +36,9 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 - Utveckla  <!-- .element: class="fragment" -->
 - Utvärdera  <!-- .element: class="fragment" -->
 Note: 
-Utveckla ett gränsnitt för inlärning av naturlig deduktion
+Utveckla ett gränsnitt för inlärning av naturlig deduktion ämnat till studenter
 
-Användartest och Heuristisk utvärdering för att avgöra om programmet är studentanpassat
+Användartest och Heuristisk utvärdering för att avgöra om programmet är användarvänligt
           </script>
         </section>
         <section data-markdown class="center">
@@ -46,7 +46,7 @@ Användartest och Heuristisk utvärdering för att avgöra om programmet är stu
 ## Förstudie av Beviseditorer
 - Heuristisk utvärdering <!-- .element: class="fragment" -->
 - JAPE, NDProofs och Logica undersöktes <!-- .element: class="fragment" -->
-- ACL2, HOL, Coq och Isabelle uteslös ur studien <!-- .element: class="fragment" -->
+- ACL2, HOL, Coq och Isabelle uteslöts ur studien <!-- .element: class="fragment" -->
 Note:
 Avgöra om det är brist på väldesignade editorer som följer Jacob Nielsens Heuristic, vi använder oss av en metod som Fredrik kommer att gå in på sen.
 
@@ -59,11 +59,10 @@ inga kortkommandon för unicode symboler, går inte att redigera mitt i beviset 
 ## Kursbok
 - Följa konventioner <!-- .element: class="fragment" -->
 - Undersökte kurshemsidor som har naturlig deduktion i sitt innehåll <!-- .element: class="fragment" -->
-- 18 av de 36 rekommenderade kurslitteraturerna var Logic in Computer Science: Modelling and Reasoning about Systems <!-- .element: class="fragment" -->
-- Främst Svenska, Engelska och Amerikanska universitet  <!-- .element: class="fragment" -->
+- 18 av de 25 universiteten använde boken Logic in Computer Science: Modelling and Reasoning about Systems i sin undervisning <!-- .element: class="fragment" -->
 Note:
 delbevisen markeras genom att de ligger inne i en box, operatorprioritet
-
+Främst Svenska, Engelska och Amerikanska universitet
 Svenska och Engelska sökord
           </script>
         </section>
@@ -79,6 +78,7 @@ Funktionaliteter <!-- .element: class="fragment" -->
 - Export till LaTeX <!-- .element: class="fragment" -->
 - Genvägar <!-- .element: class="fragment" -->
 - Spara/ladda <!-- .element: class="fragment" -->
+- Felmeddelanden <!-- .element: class="fragment" -->
 
 Note:
 Blir rött när uttrycket inte är välformat
@@ -140,13 +140,18 @@ P(y) & PBC, 4--6
             <script type="text/template">
 ## Genvägar
 Olika sätt att skriva ∧
-- Skriva ^ <!-- .element: class="fragment" -->
-- Skriva & <!-- .element: class="fragment" -->
-- Skriva an <!-- .element: class="fragment" -->
+- Skriva ^ <!-- .element: class="fragment" data-fragment-index="1" -->
+- Skriva & <!-- .element: class="fragment" data-fragment-index="1" -->
+- Skriva an <!-- .element: class="fragment" data-fragment-index="1" -->
 - Klicka på knappen <!-- .element: class="fragment" -->
 - Använd insert unicode, U+2227 <!-- .element: class="fragment" -->
 - Googla efter AND eller LAND och använda copy paste <!-- .element: class="fragment" -->
 - Skriva \land i en matematisk miljö i en LaTeX-fil, kompilera till PDF, och kopiera symbolen därifrån<!-- .element: class="fragment" -->
+            </script>
+          </section>
+          <section data-markdown data-timing="60" data-background-video="videos/errormessages.webm" data-background-video-loop data-background-video-muted>
+            <script type="text/template">
+## Felmeddelanden
             </script>
           </section>
         </section>
@@ -154,23 +159,68 @@ Olika sätt att skriva ∧
           <section data-markdown class="center">
             <script type="text/template">
 ## Utvärdering av editorn
-- Nielsen's heuristics <!-- .element: class="fragment" -->
-- User tests <!-- .element: class="fragment" -->
+- Nielsen's heuristiker <!-- .element: class="fragment" -->
+- Användartester <!-- .element: class="fragment" -->
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ## Nielsen's heuristics
 1. Visibility of system status <!-- .element: class="fragment" -->
-2. Match between system and the real world <!-- .element: class="fragment" -->
-3. User control and freedom <!-- .element: class="fragment" -->
-4. Consistency and standards <!-- .element: class="fragment" -->
-5. Error prevention <!-- .element: class="fragment" -->
-6. Recognition rather than recall <!-- .element: class="fragment" -->
-7. Flexibility and efficiency of use <!-- .element: class="fragment" -->
-8. Aesthetic and minimalist design <!-- .element: class="fragment" -->
-9. Help users recognise, diagnose, and recover from errors <!-- .element: class="fragment" -->
+2. Match between system and the real world <!-- .element: class="fragment" data-autoslide="200" -->
+3. User control and freedom <!-- .element: class="fragment" data-autoslide="200" -->
+4. Consistency and standards <!-- .element: class="fragment" data-autoslide="200" -->
+5. Error prevention <!-- .element: class="fragment" data-autoslide="200" -->
+6. Recognition rather than recall <!-- .element: class="fragment" data-autoslide="200" -->
+7. Flexibility and efficiency of use <!-- .element: class="fragment" data-autoslide="200" -->
+8. Aesthetic and minimalist design <!-- .element: class="fragment" data-autoslide="200" -->
+9. Help users recognise, diagnose, and recover from errors <!-- .element: class="fragment" data-autoslide="200" -->
 10. Help and documentation <!-- .element: class="fragment" -->
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Användartester
+- 5 som inte har studerat    <!-- .element: class="fragment" -->
+- 5 som har studerat    <!-- .element: class="fragment" -->
+- Utvärdering av användarvänlighet     <!-- .element: class="fragment" -->
+- Ingen hjälp   <!-- .element: class="fragment" -->
+            </script>
+          </section>
+        <section data-markdown class="center">
+            <script type="text/template">
+<img src="/images/Bevis1.png"  height="300" width="600">
+            </script>
+          </section>
+        <section data-markdown class="center">
+            <script type="text/template">
+<img src="/images/Bevis2.png"  height="550" width="750">
+            </script>
+          </section>
+        <section data-markdown class="center">
+            <script type="text/template">
+<img src="/images/MergedBevis.png"  height="500" width="1100">
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Användartester
+- 5 som inte har studerat
+- 5 som har studerat    
+- Utvärdering av användarvänlighet     
+- Ingen hjälp   
+- Frågor     <!-- .element: class="fragment" -->
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Brister i testerna
+- Heuristiska testet gjordes av oss    <!-- .element: class="fragment" -->
+- Liten testgrupp     <!-- .element: class="fragment" -->
+- Homogen testgrupp     <!-- .element: class="fragment" -->
+- Bekanta ansikten     <!-- .element: class="fragment" -->
+- Informell miljö     <!-- .element: class="fragment" -->
+- Ingen formell testning     <!-- .element: class="fragment" -->
             </script>
           </section>
         </section>
@@ -222,7 +272,17 @@ Olika sätt att skriva ∧
 - Feedback på bristande användarvänlighet <!-- .element: class="fragment" -->
             </script>
           </section>
-        </section>
+          <section>
+            <section data-markdown class="center">
+              <script type="text/template">
+## Kriterier för vår beviseditor
+- Lättillgänglig  
+- Nödvändig funktionalitet 
+- Studentanpassad  
+- Användarvänlig
+              </script>
+            </section>
+          </section>
       </div>
     </div>
     <script src="lib/js/head.min.js"></script>
@@ -234,14 +294,15 @@ Olika sätt att skriva ∧
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
   // Transition style
-  transition: 'slide', // none/fade/slide/convex/concave/zoom
+  transition: 'fade', // none/fade/slide/convex/concave/zoom
   // Transition speed
   transitionSpeed: 'default', // default/fast/slow
   // Transition style for full page slide backgrounds
-  backgroundTransition: 'zoom', // none/fade/slide/convex/concave/zoom
+  backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
   // Set default timing of 2 minutes per slide
   defaultTiming: 120,
   center: false,
+  autoSliedeStoppable: false,
   dependencies: [
     { src: 'plugin/markdown/marked.js' },
     { src: 'plugin/markdown/markdown.js' },
