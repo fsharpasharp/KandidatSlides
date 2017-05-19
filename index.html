@@ -24,15 +24,17 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   <body>
     <div class="reveal">
       <div class="slides">
-        <section class="center" data-timing=10>
+        <section data-background-image="images/proghram.PNG" class="center" data-timing="10">
           <h1 class="fragment fade-down">Conan</h1>
-          <p class="fragment fade-right">En beviseditor för första ordningens logik</p>
+          <h3 class="fragment fade-right">En beviseditor för första ordningens logik</h3>
         </section>
+        <section>
           <section data-markdown class="center">
           <script type="text/template">
 ## Syftet med projektet
-- Utveckla <!-- .element: class="fragment" -->
-- Utvärdera <!-- .element: class="fragment" -->
+- Brist på bra editorer <!-- .element: class="fragment" -->
+- Utveckla  <!-- .element: class="fragment" -->
+- Utvärdera  <!-- .element: class="fragment" -->
 Note: 
 Utveckla ett gränsnitt för inlärning av naturlig deduktion
 
@@ -43,10 +45,10 @@ Användartest och Heuristisk utvärdering för att avgöra om programmet är stu
           <script type="text/template">
 ## Förstudie av Beviseditorer
 - Heuristisk utvärdering <!-- .element: class="fragment" -->
-- JAPE, NDProofs och Logica <!-- .element: class="fragment" -->
-- Brister <!-- .element: class="fragment" -->
+- JAPE, NDProofs och Logica undersöktes <!-- .element: class="fragment" -->
+- ACL2, HOL, Coq och Isabelle uteslös ur studien <!-- .element: class="fragment" -->
 Note:
-Avgöra om det är brist på väldesignade editorer som följer Jacob Nielsens Heuristic.
+Avgöra om det är brist på väldesignade editorer som följer Jacob Nielsens Heuristic, vi använder oss av en metod som Fredrik kommer att gå in på sen.
 
 Vi använder oss av en metod som Fredrik kommer att gå in på sen ett urval från tillgängliga beviseditorer baserat på ett första  intryck på grund av tidsbrist
 inga kortkommandon för unicode symboler, går inte att redigera mitt i beviset och presenterade för många alternativ i gränsnittet
@@ -64,6 +66,7 @@ delbevisen markeras genom att de ligger inne i en box, operatorprioritet
 
 Svenska och Engelska sökord
           </script>
+        </section>
         </section>
         <section>
           <section data-markdown class="center">
@@ -87,27 +90,27 @@ Generering av korrekta uttryck givet korrekta premisser
 Exportera till LaTeX
             </script>
           </section>
-          <section data-markdown data-timing=60 data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown data-timing="60" data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted>
             <script type="text/template">
 ## Syntax checking
             </script>
           </section>
-          <section data-markdown data-timing=60 data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown data-timing="60" data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted>
             <script type="text/template">
 ## Verifikation
             </script>
           </section>
-          <section data-markdown data-timing=60 data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown data-timing="60" data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted>
             <script type="text/template">
 ## Generering
             </script>
           </section>
-          <section data-markdown data-timing=60 data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown data-timing="60" data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted>
             <script type="text/template">
 ## Export till LaTeX
             </script>
           </section>
-          <section data-markdown data-timing=10>
+          <section data-markdown data-timing="10">
             <script type="text/template">
 ```
 \begin{logicproof}{4}
@@ -133,7 +136,7 @@ P(y) & PBC, 4--6
 ```
             </script>
           </section>
-          <section data-markdown data-timing=60>
+          <section data-markdown data-timing="60">
             <script type="text/template">
 ## Genvägar
 Olika sätt att skriva ∧
