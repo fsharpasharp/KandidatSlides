@@ -24,7 +24,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   <body>
     <div class="reveal">
       <div class="slides">
-        <section class="center" data-timing="10">
+        <section class="center">
           <h1 class="fragment fade-down">Conan</h1>
           <h3 class="fragment fade-right">En beviseditor för predikatlogik</h3>
         </section>
@@ -58,7 +58,6 @@ inga kortkommandon för unicode symboler
         </section>
         <section data-markdown class="center">
           <script type="text/template">
-
 ## Problem med existerande beviseditorer
 - få kortkommandon <!-- .element: class="fragment" -->
 - redigera mitt i beviset <!-- .element: class="fragment" -->
@@ -73,7 +72,9 @@ inga kortkommandon för unicode symboler
 - 18 av de 25 universiteten använde i sin undervisning boken Logic in Computer Science: Modelling and Reasoning about Systems <!-- .element: class="fragment" -->
 Note:
 delbevisen markeras genom att de ligger inne i en box, operatorprioritet
+
 Främst Svenska, Engelska och Amerikanska universitet
+
 Svenska och Engelska sökord
           </script>
         </section>
@@ -97,31 +98,29 @@ Blir rött när uttrycket inte är välformat
 Verifikiation av korrekt tillämpning av regler
 
 Generering av korrekta uttryck givet korrekta premisser
-
-Exportera till LaTeX
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Syntax checking
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Verifikation
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Generering
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Export till LaTeX
             </script>
           </section>
-          <section data-markdown data-timing="10">
+          <section data-markdown>
             <script type="text/template">
 ```
 \begin{logicproof}{4}
@@ -147,7 +146,7 @@ P(y) & PBC, 4--6
 ```
             </script>
           </section>
-          <section data-markdown data-timing="60">
+          <section data-markdown> 
             <script type="text/template">
 ## Genvägar
 Olika sätt att skriva ∧
@@ -159,7 +158,7 @@ Olika sätt att skriva ∧
 - Googla efter AND eller LAND och använda copy paste <!-- .element: class="fragment" -->
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/errormessages.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/errormessages.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Felmeddelanden
             </script>
@@ -197,17 +196,17 @@ Olika sätt att skriva ∧
 - Ingen hjälp   <!-- .element: class="fragment" -->
             </script>
           </section>
-        <section data-markdown class="center">
+          <section data-markdown class="center">
             <script type="text/template">
 <img src="/images/Bevis1.png"  height="300" width="600">
             </script>
           </section>
-        <section data-markdown class="center">
+          <section data-markdown class="center">
             <script type="text/template">
 <img src="/images/Bevis2.png"  height="550" width="750">
             </script>
           </section>
-        <section data-markdown class="center">
+          <section data-markdown class="center">
             <script type="text/template">
 <img src="/images/MergedBevis.png"  height="500" width="1100">
             </script>
@@ -310,7 +309,7 @@ Reveal.initialize({
   // Transition style for full page slide backgrounds
   backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
   // Set default timing of 2 minutes per slide
-  defaultTiming: 120,
+  // defaultTiming: 120,
   center: false,
   autoSliedeStoppable: false,
   dependencies: [
