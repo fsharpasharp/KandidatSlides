@@ -25,19 +25,17 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     <div class="reveal">
       <div class="slides">
         <section class="center">
-          <h1 class="fragment fade-down">Conan</h1>
+          <h1 data-autoslide="500" class="fragment fade-down">Conan</h1>
           <h3 class="fragment fade-right">En beviseditor för predikatlogik</h3>
         </section>
         <section>
+          <section data-markdown class="center" data-autoslide="1000">
+            <script type="text/template">
+ “Programmet ser bra och tydligt ut” -Anonym 
+            </script>
+          </section>
           <section data-markdown class="center">
-          <script type="text/template">
-
-
-“Programmet ser bra och tydligt ut” - Anonym  <!-- .element: class="fragment" -->		  
-	  </script>
-        </section>
-        <section data-markdown class="center">
-          <script type="text/template">	  
+            <script type="text/template">	  
 ## Syftet med projektet
 - Utgångspunkt <!-- .element: class="fragment" -->
 - Utveckla  <!-- .element: class="fragment" -->
@@ -48,10 +46,10 @@ Vår utgångspunkt för projekter var att det vid nuläget finns en brist på br
 Utveckla ett gränsnitt för inlärning av naturlig deduktion ämnat för studenter
 
 Användartest och Heuristisk utvärdering för att avgöra om programmet är användarvänligt
-          </script>
-        </section>
-        <section data-markdown class="center">
-          <script type="text/template">
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
 ## Förstudie av beviseditorer
 - Heuristisk utvärdering <!-- .element: class="fragment" -->
 - JAPE, NDProofs och Logica undersöktes <!-- .element: class="fragment" -->
@@ -61,18 +59,18 @@ Avgöra om det är brist på väldesignade editorer som följer Jacob Nielsens H
 
 ett urval från tillgängliga beviseditorer baserat på ett första  intryck på grund av tidsbrist
 inga kortkommandon för unicode symboler
-          </script>
-        </section>
-        <section data-markdown class="center">
-          <script type="text/template">
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
 ## Problem med existerande beviseditorer
 - få kortkommandon <!-- .element: class="fragment" -->
 - redigera mitt i beviset <!-- .element: class="fragment" -->
 - svårt att installera <!-- .element: class="fragment" -->  
-          </script>
-        </section>
-        <section data-markdown class="center">
-          <script type="text/template">
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
 ## Kursbok
 - Följa konventioner <!-- .element: class="fragment" -->
 - Undersökte kurshemsidor som har naturlig deduktion i sitt innehåll <!-- .element: class="fragment" -->
@@ -83,8 +81,8 @@ delbevisen markeras genom att de ligger inne i en box, operatorprioritet
 Främst Svenska, Engelska och Amerikanska universitet
 
 Svenska och Engelska sökord
-          </script>
-        </section>
+            </script>
+          </section>
         </section>
         <section>
           <section data-markdown class="center">
@@ -100,7 +98,7 @@ Funktionaliteter <!-- .element: class="fragment" -->
 - Felmeddelanden <!-- .element: class="fragment" -->
 
 Note:
-Blir rött när uttrycket inte är välformat
+Blir rött när uttrycket inte är korrekt
 
 Verifikiation av korrekt tillämpning av regler
 
@@ -110,21 +108,40 @@ Generering av korrekta uttryck givet korrekta premisser
           <section data-markdown data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Syntax checking
+
+Note:
+Uttrycket blir rött
+
+Det parsade uttrycket syns när det är korrekt
             </script>
           </section>
           <section data-markdown  data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Verifikation
+
+Note:
+Rött i regelboxen när det inte är verifierat
             </script>
           </section>
           <section data-markdown  data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Generering
+Note:
+P premiss
+
+P implicerar Q  premiss
+
+implikationselimination
+
+andintroduktion
             </script>
           </section>
           <section data-markdown  data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Export till LaTeX
+
+Note:
+Varför?
             </script>
           </section>
           <section data-markdown>
@@ -163,6 +180,8 @@ Olika sätt att skriva ∧
 - Klicka på knappen <!-- .element: class="fragment" -->
 - Använd insert unicode, U+2227 <!-- .element: class="fragment" -->
 - Googla efter AND eller LAND och använda copy paste <!-- .element: class="fragment" -->
+Note:
+De två sista är ett skämt
             </script>
           </section>
           <section data-markdown  data-background-video="videos/errormessages.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
