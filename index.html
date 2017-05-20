@@ -32,26 +32,37 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
           <section data-markdown class="center">
           <script type="text/template">
 ## Syftet med projektet
-- Brist på bra editorer <!-- .element: class="fragment" -->
+- Utgångspunkt <!-- .element: class="fragment" -->
 - Utveckla  <!-- .element: class="fragment" -->
 - Utvärdera  <!-- .element: class="fragment" -->
 Note: 
-Utveckla ett gränsnitt för inlärning av naturlig deduktion ämnat till studenter
+Vår utgångspunkt för projekter var att det vid nuläget finns en brist på bra editorer
+
+Utveckla ett gränsnitt för inlärning av naturlig deduktion ämnat för studenter
 
 Användartest och Heuristisk utvärdering för att avgöra om programmet är användarvänligt
           </script>
         </section>
         <section data-markdown class="center">
           <script type="text/template">
-## Förstudie av Beviseditorer
+## Förstudie av beviseditorer
 - Heuristisk utvärdering <!-- .element: class="fragment" -->
 - JAPE, NDProofs och Logica undersöktes <!-- .element: class="fragment" -->
-- ACL2, HOL, Coq och Isabelle uteslöts ur studien <!-- .element: class="fragment" -->
+- ACL2, HOL, Coq och Isabelle uteslöts ur studien  <!-- .element: class="fragment" -->
 Note:
 Avgöra om det är brist på väldesignade editorer som följer Jacob Nielsens Heuristic, vi använder oss av en metod som Fredrik kommer att gå in på sen.
 
-Vi använder oss av en metod som Fredrik kommer att gå in på sen ett urval från tillgängliga beviseditorer baserat på ett första  intryck på grund av tidsbrist
-inga kortkommandon för unicode symboler, går inte att redigera mitt i beviset och presenterade för många alternativ i gränsnittet
+ett urval från tillgängliga beviseditorer baserat på ett första  intryck på grund av tidsbrist
+inga kortkommandon för unicode symboler
+          </script>
+        </section>
+        <section data-markdown class="center">
+          <script type="text/template">
+
+## Problem med existerande beviseditorer
+- få kortkommandon <!-- .element: class="fragment" -->
+- redigera mitt i beviset <!-- .element: class="fragment" -->
+- svårt att installera <!-- .element: class="fragment" -->  
           </script>
         </section>
         <section data-markdown class="center">
@@ -59,7 +70,7 @@ inga kortkommandon för unicode symboler, går inte att redigera mitt i beviset 
 ## Kursbok
 - Följa konventioner <!-- .element: class="fragment" -->
 - Undersökte kurshemsidor som har naturlig deduktion i sitt innehåll <!-- .element: class="fragment" -->
-- 18 av de 25 universiteten använde boken Logic in Computer Science: Modelling and Reasoning about Systems i sin undervisning <!-- .element: class="fragment" -->
+- 18 av de 25 universiteten använde i sin undervisning boken Logic in Computer Science: Modelling and Reasoning about Systems <!-- .element: class="fragment" -->
 Note:
 delbevisen markeras genom att de ligger inne i en box, operatorprioritet
 Främst Svenska, Engelska och Amerikanska universitet
@@ -227,48 +238,48 @@ Olika sätt att skriva ∧
           <section data-markdown class="center">
             <script type="text/template">
 ## Kriterier för vår beviseditor
-- Lättillgänglig  <!-- .element: class="fragment" -->
-- Nödvändig funktionalitet  <!-- .element: class="fragment" -->
-- Studentanpassad  <!-- .element: class="fragment" -->
-- Användarvänlig  <!-- .element: class="fragment" -->
+- Lättillgänglig  
+- Nödvändig funktionalitet för beviseditor
+- Studentanpassad  
+- Användarvänlig  
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Lättillgänglig
-- Lätt att installera <!-- .element: class="fragment" -->
-- Nedladdningsbar <!-- .element: class="fragment" -->
-- Windows, OSX, Linux <!-- .element: class="fragment" -->
+- Lätt att installera 
+- Nedladdningsbar 
+- Windows, OSX, Linux 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
-### Nödvändig funktionalitet
-- Redigera bevis <!-- .element: class="fragment" -->
-- Spara/ladda <!-- .element: class="fragment" -->
-- Verifiera regelapplikationer <!-- .element: class="fragment" -->
+### Nödvändig funktionalitet för beviseditor
+- Redigera bevis 
+- Spara/ladda 
+- Verifiera regelapplikationer 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Studentanpassad
-- Följer kurslitteratur  <!-- .element: class="fragment" -->
-- Snabbt att lära sig <!-- .element: class="fragment" -->
-    - Användartester <!-- .element: class="fragment" -->
+- Följer kurslitteratur  
+- Snabbt att lära sig 
+    - Användartester 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Användarvänlig
-- Heuristisk utvärdering <!-- .element: class="fragment" -->
-- Stöd från användartester <!-- .element: class="fragment" -->
+- Heuristisk utvärdering 
+- Stöd från användartester 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Reservationer
-- Testning av verifikation <!-- .element: class="fragment" -->
-- Feedback på bristande användarvänlighet <!-- .element: class="fragment" -->
+- Testning av verifikation 
+- Feedback på bristande användarvänlighet 
             </script>
           </section>
           <section>
@@ -276,7 +287,7 @@ Olika sätt att skriva ∧
               <script type="text/template">
 ## Kriterier för vår beviseditor
 - Lättillgänglig  
-- Nödvändig funktionalitet 
+- Nödvändig funktionalitet för beviseditor
 - Studentanpassad  
 - Användarvänlig
               </script>
@@ -293,7 +304,7 @@ Olika sätt att skriva ∧
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
   // Transition style
-  transition: 'slide', // none/fade/slide/convex/concave/zoom
+  transition: 'fade', // none/fade/slide/convex/concave/zoom
   // Transition speed
   transitionSpeed: 'default', // default/fast/slow
   // Transition style for full page slide backgrounds
