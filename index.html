@@ -24,48 +24,60 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
   <body>
     <div class="reveal">
       <div class="slides">
-        <section class="center" data-timing="10">
-          <h1 class="fragment fade-down">Conan</h1>
+        <section class="center">
+          <h1 data-autoslide="500" class="fragment fade-down">Conan</h1>
           <h3 class="fragment fade-right">En beviseditor för predikatlogik</h3>
         </section>
         <section>
-          <section data-markdown class="center">
-          <script type="text/template">
+          <section data-markdown class="center" data-autoslide="1000">
+            <script type="text/template">  
 ## Syftet med projektet
-- Brist på bra editorer <!-- .element: class="fragment" -->
-- Utveckla  <!-- .element: class="fragment" -->
-- Utvärdera  <!-- .element: class="fragment" -->
+- Brist på väldesignade beviseditorer <!-- .element: class="fragment" -->
+- Anpassat för studenter  <!-- .element: class="fragment" -->
+- Heuristisk utvärdering och Användartester  <!-- .element: class="fragment" -->
 Note: 
-Utveckla ett gränsnitt för inlärning av naturlig deduktion ämnat till studenter
+Vår utgångspunkt för projekter var att det vid nuläget finns en brist på bra editorer
+
+Utveckla ett gränsnitt för inlärning av naturlig deduktion ämnat för studenter
 
 Användartest och Heuristisk utvärdering för att avgöra om programmet är användarvänligt
-          </script>
-        </section>
-        <section data-markdown class="center">
-          <script type="text/template">
-## Förstudie av Beviseditorer
-- Heuristisk utvärdering <!-- .element: class="fragment" -->
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Förstudie av beviseditorer
+- Undersöka bristen av bra editorer <!-- .element: class="fragment" -->
 - JAPE, NDProofs och Logica undersöktes <!-- .element: class="fragment" -->
-- ACL2, HOL, Coq och Isabelle uteslöts ur studien <!-- .element: class="fragment" -->
+- ACL2, HOL, Coq och Isabelle uteslöts ur studien  <!-- .element: class="fragment" -->
 Note:
 Avgöra om det är brist på väldesignade editorer som följer Jacob Nielsens Heuristic, vi använder oss av en metod som Fredrik kommer att gå in på sen.
 
-Vi använder oss av en metod som Fredrik kommer att gå in på sen ett urval från tillgängliga beviseditorer baserat på ett första  intryck på grund av tidsbrist
-inga kortkommandon för unicode symboler, går inte att redigera mitt i beviset och presenterade för många alternativ i gränsnittet
-          </script>
-        </section>
-        <section data-markdown class="center">
-          <script type="text/template">
+ett urval från tillgängliga beviseditorer baserat på ett första  intryck på grund av tidsbrist
+inga kortkommandon för unicode symboler
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+## Problem med existerande beviseditorer
+- få kortkommandon <!-- .element: class="fragment" -->
+- redigera mitt i beviset <!-- .element: class="fragment" -->
+- svårt att installera <!-- .element: class="fragment" -->  
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
 ## Kursbok
 - Följa konventioner <!-- .element: class="fragment" -->
 - Undersökte kurshemsidor som har naturlig deduktion i sitt innehåll <!-- .element: class="fragment" -->
-- 18 av de 25 universiteten använde boken Logic in Computer Science: Modelling and Reasoning about Systems i sin undervisning <!-- .element: class="fragment" -->
+- 18 av de 25 universiteten använde i sin undervisning boken Logic in Computer Science: Modelling and Reasoning about Systems <!-- .element: class="fragment" -->
 Note:
 delbevisen markeras genom att de ligger inne i en box, operatorprioritet
+
 Främst Svenska, Engelska och Amerikanska universitet
+
 Svenska och Engelska sökord
-          </script>
-        </section>
+            </script>
+          </section>
         </section>
         <section>
           <section data-markdown class="center">
@@ -81,36 +93,53 @@ Funktionaliteter <!-- .element: class="fragment" -->
 - Felmeddelanden <!-- .element: class="fragment" -->
 
 Note:
-Blir rött när uttrycket inte är välformat
+Blir rött när uttrycket inte är korrekt
 
 Verifikiation av korrekt tillämpning av regler
 
 Generering av korrekta uttryck givet korrekta premisser
-
-Exportera till LaTeX
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Syntax checking
+
+Note:
+Uttrycket blir rött
+
+Det parsade uttrycket syns när det är korrekt
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/verification.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Verifikation
+
+Note:
+Rött i regelboxen när det inte är verifierat
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/generation.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Generering
+Note:
+P premiss
+
+P implicerar Q  premiss
+
+implikationselimination
+
+andintroduktion
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/exportlatex.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Export till LaTeX
+
+Note:
+Varför?
             </script>
           </section>
-          <section data-markdown data-timing="10">
+          <section data-markdown>
             <script type="text/template">
 ```
 \begin{logicproof}{4}
@@ -136,7 +165,7 @@ P(y) & PBC, 4--6
 ```
             </script>
           </section>
-          <section data-markdown data-timing="60">
+          <section data-markdown> 
             <script type="text/template">
 ## Genvägar
 Olika sätt att skriva ∧
@@ -146,10 +175,11 @@ Olika sätt att skriva ∧
 - Klicka på knappen <!-- .element: class="fragment" -->
 - Använd insert unicode, U+2227 <!-- .element: class="fragment" -->
 - Googla efter AND eller LAND och använda copy paste <!-- .element: class="fragment" -->
-- Skriva \land i en matematisk miljö i en LaTeX-fil, kompilera till PDF, och kopiera symbolen därifrån<!-- .element: class="fragment" -->
+Note:
+De två sista är ett skämt
             </script>
           </section>
-          <section data-markdown data-timing="60" data-background-video="videos/errormessages.webm" data-background-video-loop data-background-video-muted>
+          <section data-markdown  data-background-video="videos/errormessages.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
 ## Felmeddelanden
             </script>
@@ -187,17 +217,17 @@ Olika sätt att skriva ∧
 - Ingen hjälp   <!-- .element: class="fragment" -->
             </script>
           </section>
-        <section data-markdown class="center">
+          <section data-markdown class="center">
             <script type="text/template">
 <img src="/images/Bevis1.png"  height="300" width="600">
             </script>
           </section>
-        <section data-markdown class="center">
+          <section data-markdown class="center">
             <script type="text/template">
 <img src="/images/Bevis2.png"  height="550" width="750">
             </script>
           </section>
-        <section data-markdown class="center">
+          <section data-markdown class="center">
             <script type="text/template">
 <img src="/images/MergedBevis.png"  height="500" width="1100">
             </script>
@@ -228,48 +258,48 @@ Olika sätt att skriva ∧
           <section data-markdown class="center">
             <script type="text/template">
 ## Kriterier för vår beviseditor
-- Lättillgänglig  <!-- .element: class="fragment" -->
-- Nödvändig funktionalitet  <!-- .element: class="fragment" -->
-- Studentanpassad  <!-- .element: class="fragment" -->
-- Användarvänlig  <!-- .element: class="fragment" -->
+- Lättillgänglig  
+- Nödvändig funktionalitet för beviseditor
+- Studentanpassad  
+- Användarvänlig  
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Lättillgänglig
-- Lätt att installera <!-- .element: class="fragment" -->
-- Nedladdningsbar <!-- .element: class="fragment" -->
-- Windows, OSX, Linux <!-- .element: class="fragment" -->
+- Lätt att installera 
+- Nedladdningsbar 
+- Windows, OSX, Linux 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
-### Nödvändig funktionalitet
-- Redigera bevis <!-- .element: class="fragment" -->
-- Spara/ladda <!-- .element: class="fragment" -->
-- Verifiera regelapplikationer <!-- .element: class="fragment" -->
+### Nödvändig funktionalitet för beviseditor
+- Redigera bevis 
+- Spara/ladda 
+- Verifiera regelapplikationer 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Studentanpassad
-- Följer kurslitteratur  <!-- .element: class="fragment" -->
-- Snabbt att lära sig <!-- .element: class="fragment" -->
-    - Användartester <!-- .element: class="fragment" -->
+- Följer kurslitteratur  
+- Snabbt att lära sig 
+    - Användartester 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Användarvänlig
-- Heuristisk utvärdering <!-- .element: class="fragment" -->
-- Stöd från användartester <!-- .element: class="fragment" -->
+- Heuristisk utvärdering 
+- Stöd från användartester 
             </script>
           </section>
           <section data-markdown class="center">
             <script type="text/template">
 ### Reservationer
-- Testning av verifikation <!-- .element: class="fragment" -->
-- Feedback på bristande användarvänlighet <!-- .element: class="fragment" -->
+- Testning av verifikation 
+- Feedback på bristande användarvänlighet 
             </script>
           </section>
           <section>
@@ -277,7 +307,7 @@ Olika sätt att skriva ∧
               <script type="text/template">
 ## Kriterier för vår beviseditor
 - Lättillgänglig  
-- Nödvändig funktionalitet 
+- Nödvändig funktionalitet för beviseditor
 - Studentanpassad  
 - Användarvänlig
               </script>
@@ -300,7 +330,7 @@ Reveal.initialize({
   // Transition style for full page slide backgrounds
   backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
   // Set default timing of 2 minutes per slide
-  defaultTiming: 120,
+  // defaultTiming: 120,
   center: false,
   autoSliedeStoppable: false,
   dependencies: [
