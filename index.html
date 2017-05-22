@@ -25,11 +25,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
     <div class="reveal">
       <div class="slides">
         <section class="center">
-          <h1 data-autoslide="500" class="fragment fade-down">Conan</h1>
+          <h1 class="fragment fade-down">Conan</h1>
           <h3 class="fragment fade-right">En beviseditor för predikatlogik</h3>
         </section>
         <section>
-          <section data-markdown class="center" data-autoslide="1000">
+          <section data-markdown class="center">
             <script type="text/template">  
 ## Syftet med projektet
 - Brist på väldesignade beviseditorer <!-- .element: class="fragment" -->
@@ -59,9 +59,9 @@ inga kortkommandon för unicode symboler
           <section data-markdown class="center">
             <script type="text/template">
 ## Problem med existerande beviseditorer
-- få kortkommandon <!-- .element: class="fragment" -->
-- går inte att redigera mitt i beviset <!-- .element: class="fragment" -->
-- svårt att installera <!-- .element: class="fragment" -->
+- Få kortkommandon <!-- .element: class="fragment" -->
+- Går inte att redigera mitt i beviset <!-- .element: class="fragment" -->
+- Svårt att installera <!-- .element: class="fragment" -->
   
             </script>
           </section>
@@ -91,25 +91,18 @@ Svenska och Engelska sökord
           </section>
         </section>
         <section>
-          <section data-markdown class="center">		    
-            <script type="text/template">	
-## Editorn
-Funktionaliteter <!-- .element: class="fragment" -->
-- Syntax checking <!-- .element: class="fragment" -->
-- Verifikation <!-- .element: class="fragment" -->
-- Generering <!-- .element: class="fragment" -->
-- Export till LaTeX <!-- .element: class="fragment" -->
-- Genvägar <!-- .element: class="fragment" -->
-- Spara/ladda <!-- .element: class="fragment" -->
-- Felmeddelanden <!-- .element: class="fragment" -->
-
-Note:
-Blir rött när uttrycket inte är korrekt
-
-Verifikiation av korrekt tillämpning av regler
-
-Generering av korrekta uttryck givet korrekta premisser
-            </script>
+          <section class="center">
+            <h2>Editorn</h2>
+            <p class="fragment">Funktionaliteter</p>
+            <ul class="fragment">
+              <li>Syntax checking</li>
+              <li>Verifikation</li>
+              <li>Generering</li>
+              <li>Export till LaTeX</li>
+              <li>Genvägar</li>
+              <li class="fragment grow">Spara/ladda</li>
+              <li>Felmeddelanden</li>
+            </ul>
           </section>
           <section data-markdown data-background-video="videos/wellformed.webm" data-background-video-loop data-background-video-muted data-background-size="contain">
             <script type="text/template">
@@ -179,10 +172,12 @@ P(y) & PBC, 4--6
           <section data-markdown> 
             <script type="text/template">
 ## Genvägar
-Olika sätt att skriva ∧
-- Skriva ^ <!-- .element: class="fragment" data-fragment-index="1" -->
-- Skriva & <!-- .element: class="fragment" data-fragment-index="1" -->
-- Skriva an <!-- .element: class="fragment" data-fragment-index="1" -->
+Symboler: ∀, ∃, ∧, ∨, →, ¬, ⊥<!-- .element: class="fragment" data-fragment-index="1" -->
+
+**Olika sätt att skriva ∧** <!-- .element: class="fragment" data-fragment-index="2" -->
+- Skriva ^ <!-- .element: class="fragment" data-fragment-index="3" -->
+- Skriva & <!-- .element: class="fragment" data-fragment-index="3" -->
+- Skriva an <!-- .element: class="fragment" data-fragment-index="3" -->
 - Klicka på knappen <!-- .element: class="fragment" -->
 - Använd insert unicode, U+2227 <!-- .element: class="fragment" -->
 - Googla efter AND eller LAND och använda copy paste <!-- .element: class="fragment" -->
@@ -210,7 +205,7 @@ Användartester användarvänlighet
           </section>
           <section data-markdown class="center">
             <script type="text/template">
-## Nielsens heuristiker
+**Nielsens heurestiker**
 1. Visibility of system status <!-- .element: class="fragment" -->
 2. Match between system and the real world <!-- .element: class="fragment" data-autoslide="180" -->
 3. User control and freedom <!-- .element: class="fragment" data-autoslide="180" -->
@@ -303,6 +298,13 @@ Vilket grad Conan uppfyllde punkten
           <section data-markdown class="center">
             <script type="text/template">
 ### Studentanpassad
+- Följer kurslitteratur
+<img src="images/BevisComp.png"  height="500" width="1100">
+            </script>
+          </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+### Studentanpassad
 - Följer kurslitteratur  
 - Snabbt att lära sig 
     - Användartester 
@@ -333,6 +335,11 @@ Vilket grad Conan uppfyllde punkten
               </script>
             </section>
           </section>
+          <section data-markdown class="center">
+            <script type="text/template">
+# Tack för oss!
+            </script>
+          </section>
       </div>
     </div>
     <script src="lib/js/head.min.js"></script>
@@ -343,6 +350,8 @@ Vilket grad Conan uppfyllde punkten
 // - https://github.com/hakimel/reveal.js#configuration
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
+  controls: false,
+  progress: false,
   // Transition style
   transition: 'fade', // none/fade/slide/convex/concave/zoom
   // Transition speed
@@ -359,6 +368,25 @@ Reveal.initialize({
     { src: 'plugin/notes/notes.js', async: true },
     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
   ]
+});
+var paused = 0;
+Reveal.configure({
+  keyboard: {
+    32: function() { 
+      var videoTags = document.getElementsByTagName('video')
+      if (paused == 0) {
+        for(var i = 0; i < videoTags.length; i++) {
+          videoTags.item(i).pause();
+        }
+        paused = 1;
+      } else {
+        for(var i = 0; i < videoTags.length; i++) {
+          videoTags.item(i).play();
+        }
+        paused = 0;
+      }
+    }
+  }
 });
     </script>
   </body>
